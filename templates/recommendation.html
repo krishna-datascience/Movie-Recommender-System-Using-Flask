@@ -1,0 +1,38 @@
+{% extends "template.html" %}
+{% block content %}
+    <style type="text/css">    
+        body{
+            padding: 20px;
+            background: #638CB8;
+            background-repeat: no-repeat;
+            background-size: 450px 450px; 
+            background-position: center center;
+        }
+        h1{
+        font-size:40px;
+        margin-top:0;
+        font-family:Arial, sans-serif;
+        text-shadow:2px 0 15px #292929;
+        letter-spacing:4px;
+        color:#AAA;
+    }
+    </style>          
+    
+    <div class="text-center">
+        <h1>Movies Recommended based on your choices</h1>
+    </div>
+
+
+<div class="row">
+    {% for movie in table %}
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">{{movie}}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
